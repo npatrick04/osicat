@@ -762,3 +762,17 @@ than C's printf) with format string FORMAT and arguments ARGS."
   (fd      file-descriptor-designator)
   (mode    :int)
   (termios :pointer))
+
+(defsyscall "cfgetispeed" :int
+  (termios :pointer))
+
+(defsyscall "cfgetospeed" :int
+  (termios :pointer))
+
+(defsyscall "cfsetispeed" :int
+  (termios :pointer)
+  (speed   :int))
+
+(defsyscall "cfsetospeed" :int
+  (termios :pointer)
+  (speed   :int))

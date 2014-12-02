@@ -160,6 +160,10 @@
    #:syslog
    #:tcgetattr
    #:tcsetattr
+   #:cfgetispeed
+   #:cfgetospeed
+   #:cfsetispeed
+   #:cfsetospeed
    #:telldir
    #:time
    #:timer-create
@@ -379,6 +383,17 @@
    #:tcsaflush
 
    #:posix-vdisable
+
+   #:b0 #:b50 #:b75 #:b110 #:b134 #:b150 #:b200 #:b300 #:b600
+   #:b1200 #:b1800 #:b2400 #:b4800 #:b9600 #:b19200 #:b38400
+   #:b57600 #:b115200 #:b230400 
+   
+   #:csize #:cs5 #:cs6 #:cs7 #:cs8 #:cstopb #:cread #:parenb
+   #:parodd #:hupcl #:clocal
+
+   ;; Optional termios extensions
+   #:cbaud #:cbaudex
+
 
    ;; Misc
    #:repeat-upon-condition
